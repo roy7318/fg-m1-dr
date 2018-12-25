@@ -1,0 +1,13 @@
+The file accepts commands from a text file, named in the command line as an argument in args[1].
+
+
+
+Both lexer and parser, along with many side function, are located in the FileReader class, the file reader uses the lexer to convert the file into a string vectors
+that are interpeted by the parser.
+The parser creates the appropriate commands by finding keywords in the string and differentiating all the types of commands and using the correct arugments for those functions also in the line.
+There are a few global variables that are used in the program:
+A list of paths that are used to update the values of the plane parts.
+A list that connects the variable to the path it was binded to using the bind keyword.
+2 timers used to notify the program to continue only after all connections are made, pausing in the meantime.
+The program will not start unless all connections in the following order have been made:
+Program started -> Flighgear opened and the fly option selected -> Server then connects and then client connects -> rest of program continues.
