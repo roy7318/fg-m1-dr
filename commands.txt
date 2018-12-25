@@ -1,0 +1,45 @@
+openDataServer 5400 8+2
+connect 127.0.0.1 5402
+var breaks = bind "/controls/flight/speedbrake"
+var throttle = bind "/controls/engines/engine/throttle"
+var heading = bind "/instrumentation/heading-indicator/offset-deg"
+var airspeed = bind "/instrumentation/airspeed-indicator/indicated-speed-kt"
+var roll = bind "/instrumentation/attitude-indicator/indicated-roll-deg"
+var pitch = bind "/instrumentation/attitude-indicator/internal-pitch-deg"
+var rudder = bind "/controls/flight/rudder"
+var aileron = bind "/controls/flight/aileron"
+var elevator = bind "/controls/flight/elevator"
+var alt = bind "/instrumentation/altimeter/indicated-altitude-ft"
+breaks = 0
+throttle = 1+5
+var h0 = heading
+alt = 1
+print "Will now enter the condition."
+while alt != 5000  {
+print "We're inside the condition."
+rudder = 100 / 2
+aileron =  aileron/70
+elevator = pitch/50
+print alt
+alt = alt + 1
+sleep 2000
+rudder=1000
+rudder = 5000
+rudder = -3000
+rudder = 2382
+}
+print "Out of the condition"
+print "alt before multiplication by 2:"
+print alt
+alt = alt*2
+print "alt after multiplication of 2:"
+print alt
+print "Now check condition if alt is equal 20"
+if alt == 20 {
+print "alt equals 20, we're done with the condtion check."
+print "Special message for Roy, Eli is the lord Voldemort."
+print "Eli likes little english boys with glasses."
+print "Michael is Snape."
+print "Michael killed Dumbeldore."
+}
+print "End of script"
