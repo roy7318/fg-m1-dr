@@ -37,9 +37,5 @@ print alt
 print "Now check condition if alt is equal 20"
 if alt == 20 {
 print "alt equals 20, we're done with the condtion check."
-print "Special message for Roy, Eli is the lord Voldemort."
-print "Eli likes little english boys with glasses."
-print "Michael is Snape."
-print "Michael killed Dumbeldore."
 }
 print "End of script"
